@@ -1,0 +1,15 @@
+flowchart TD
+    Context["Transcript, screenshot, audio, or user prompt"] --> Search["Search approved product documents"]
+    Search --> Retrieved["Retrieved catalog context"]
+    Retrieved --> Prompt["Structured coaching prompt"]
+    Prompt --> Checks{"Safety checks"}
+    Checks --> FalseClaim["Correction alert"]
+    Checks --> Competitor["Out-of-catalog or competitor alert"]
+    Checks --> Fact["Direct factual answer"]
+    Checks --> Discovery["Next best discovery question"]
+    FalseClaim --> UI["Desktop coaching UI"]
+    Competitor --> UI
+    Fact --> UI
+    Discovery --> UI
+    UI --> Session["Session/dashboard context"]
+

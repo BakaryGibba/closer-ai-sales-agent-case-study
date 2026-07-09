@@ -1,0 +1,13 @@
+flowchart TD
+    Tenant["Tenant / Organization"] --> Config["Validated AI Configuration"]
+    Config --> Prompt["Prompt Template Variables"]
+    Config --> Quadrants["Readiness Questions"]
+    Config --> Markers["Document Chunk Markers"]
+    Config --> Threshold["Hallucination Threshold"]
+    Tenant --> Vectors["Isolated Vector Collection"]
+    Prompt --> Runtime["Live Coach Runtime"]
+    Quadrants --> Runtime
+    Markers --> Retrieval["Document Retrieval"]
+    Threshold --> Retrieval
+    Vectors --> Retrieval --> Runtime
+

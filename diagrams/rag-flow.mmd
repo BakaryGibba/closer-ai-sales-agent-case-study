@@ -1,0 +1,13 @@
+flowchart TD
+    Upload["Upload PDF"] --> Parse["Extract text"]
+    Parse --> Detect{"Structure detected?"}
+    Detect --> Markers["Chunk by CHUNK markers"]
+    Detect --> ProductSections["Chunk by product section headings"]
+    Detect --> Fallback["Character chunking fallback"]
+    Markers --> Embed["Generate embeddings"]
+    ProductSections --> Embed
+    Fallback --> Embed
+    Embed --> Store["Store vectors and payload metadata"]
+    Query["Meeting query"] --> Search["Vector search with threshold"]
+    Search --> Context["Grounded product context"]
+

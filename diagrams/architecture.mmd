@@ -1,0 +1,33 @@
+flowchart LR
+    subgraph Desktop["Electron Desktop Copilot"]
+        Overlay["Transparent Overlay UI"]
+        IPC["Preload IPC Bridge"]
+        Capture["Screenshot and Audio Capture"]
+        Coach["Live Meeting Coach"]
+        Launch["Launch Protocol Bridge"]
+    end
+
+    subgraph AI["AI and Retrieval"]
+        Providers["Gemini / OpenAI / Groq / Ollama"]
+        Embeddings["Ollama Embeddings"]
+        Qdrant["Qdrant Vector Store"]
+        Documents["Document Parser and Chunker"]
+    end
+
+    subgraph Dashboard["Team Dashboard"]
+        Web["React Dashboard"]
+        API["Express API"]
+        DB["Customer, Session, User, Document Data"]
+    end
+
+    Overlay --> IPC
+    IPC --> Capture
+    IPC --> Coach
+    IPC --> Documents
+    Documents --> Embeddings --> Qdrant
+    Coach --> Qdrant
+    Coach --> Providers
+    Launch --> API
+    Web --> API --> DB
+    API --> Launch
+

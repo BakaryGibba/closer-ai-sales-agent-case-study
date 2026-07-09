@@ -1,0 +1,12 @@
+flowchart LR
+    Browser["React Dashboard"] --> Routes["Protected Routes"]
+    Routes --> Overview["Overview"]
+    Routes --> Customers["Customers"]
+    Routes --> Sessions["Sessions"]
+    Routes --> Documents["Documents"]
+    Routes --> Users["Users"]
+    Routes --> Settings["Settings"]
+    Routes --> API["Express API"]
+    API --> DB["Database"]
+    API --> Electron["Electron Sync Routes"]
+

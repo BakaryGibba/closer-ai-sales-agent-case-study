@@ -1,0 +1,45 @@
+erDiagram
+    ORGANIZATION ||--o{ USER : has
+    ORGANIZATION ||--o{ CUSTOMER : owns
+    ORGANIZATION ||--o{ DOCUMENT : owns
+    CUSTOMER ||--o{ SESSION : participates_in
+    SESSION ||--o{ COACHING_EVENT : contains
+    CUSTOMER ||--o{ RELATIONSHIP_MEMORY : accumulates
+    ORGANIZATION ||--o| TENANT_AI_CONFIG : configures
+
+    ORGANIZATION {
+        int id
+        string name
+        string industry
+    }
+
+    USER {
+        int id
+        string email
+        string role
+    }
+
+    CUSTOMER {
+        int id
+        string name
+        string segment
+    }
+
+    SESSION {
+        int id
+        datetime started_at
+        string status
+    }
+
+    DOCUMENT {
+        int id
+        string name
+        string status
+    }
+
+    TENANT_AI_CONFIG {
+        string vertical
+        json quadrant_config
+        float hallucination_threshold
+    }
+
