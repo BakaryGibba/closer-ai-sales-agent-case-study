@@ -10,7 +10,11 @@
 > [!NOTE]
 > This repository is a sanitized engineering case study. It explains the architecture, AI workflow, product reasoning, and engineering decisions behind Closer without exposing secrets, customer data, private meeting transcripts, local databases, benchmark spreadsheets, or proprietary source dumps.
 
-## Hero Overview
+| Context | Team | Status | My part |
+| --- | --- | --- | --- |
+| AI Engineering Internship, Apping Technology Sdn. Bhd. (2026) | Engineering team | Used by real users | [My contributions →](docs/12-my-contributions.md) |
+
+## Overview
 
 **Closer** is an AI sales copilot for live client conversations. It combines a discreet Electron desktop assistant, realtime transcription, screen/audio context, document-grounded retrieval, customer relationship memory, and an admin dashboard for sessions, customers, users, documents, and organizational settings.
 
@@ -36,7 +40,7 @@ The product reframes invisible assistant technology into an ethical sales enable
 
 Closer helps sales teams during live conversations by turning meeting context into actionable coaching. The desktop assistant captures user-selected context through screenshots, audio, transcription, and uploaded documents. The dashboard provides the operational layer for teams: customer profiles, session history, documents, KPIs, and user administration.
 
-The project also includes a multi-tenant architecture proposal and hallucination benchmarking artifacts, showing how the assistant can evolve from a financial-services prototype into a configurable platform for multiple industries.
+The project also includes a multi-tenant architecture proposal and hallucination benchmarking artifacts, showing how the assistant can evolve from its original financial-services deployment into a configurable platform for multiple industries.
 
 ## Feature Highlights
 
@@ -160,6 +164,16 @@ Screenshots are captured with demo data and selected to show the product from li
 - Produced a multi-tenant architecture proposal to make prompts, scoring, and vector isolation configurable by industry.
 - Added hallucination benchmarking and manual test runners to evaluate coaching quality.
 
+## Limitations
+
+What this case study does not show, and what the system does not yet do:
+
+- Source code, customer data, meeting transcripts and hallucination-benchmark results are private, so quality is described qualitatively here.
+- Multi-tenancy is an architecture proposal. Per-tenant vector isolation and a tenant configuration UI are not implemented yet.
+- Hallucination benchmarks are run manually; automating them in CI is on the roadmap.
+- Coaching responses do not yet cite the source document and section behind each claim.
+- Screen and audio capture depend on operating-system permissions on each machine.
+
 ## Lessons Learned
 
 > [!IMPORTANT]
@@ -170,3 +184,13 @@ Screenshots are captured with demo data and selected to show the product from li
 - Local AI options matter for privacy-sensitive meeting workflows.
 - Multi-tenant AI products need configuration guardrails, not freeform prompt editing.
 - Dashboards are essential for turning individual assistance into team learning.
+
+---
+
+<div align="center">
+
+**Part of [Bakary Gibba's AI engineering portfolio](https://github.com/BakaryGibba/bakary-gibba-ai-engineering-portfolio)**
+
+[Portfolio website](https://bakary-gibba.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/bakary-gibba-6409bb248/) · [Google Scholar](https://scholar.google.com/citations?user=bp0G4sgAAAAJ&hl=en)
+
+</div>
