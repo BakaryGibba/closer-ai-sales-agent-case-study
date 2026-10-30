@@ -2,9 +2,12 @@
 
 # 12 My Contributions
 
+> [!NOTE]
+> Built with the engineering team at Apping Technology Sdn. Bhd. during my AI Engineering internship (2026). This page describes my part of the work.
+
 ## Contribution Summary
 
-This case study frames Closer as a full-stack AI product contribution: desktop app integration, RAG workflow, live coaching logic, dashboard operations, multi-tenant architecture, and evaluation planning.
+My work on Closer covered the full product: desktop app integration, RAG workflow, live coaching logic, dashboard operations, multi-tenant architecture, and evaluation planning.
 
 ## Contribution Areas
 
